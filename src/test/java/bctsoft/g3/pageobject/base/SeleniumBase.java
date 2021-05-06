@@ -1,4 +1,4 @@
-package jetsmart_exercises.grupo3.Automatization.pageobject.base;
+package bctsoft.g3.pageobject.base;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;

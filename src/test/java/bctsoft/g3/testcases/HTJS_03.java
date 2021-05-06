@@ -1,6 +1,6 @@
-package jetsmart_exercises.grupo3.Automatization.testcases;
+package bctsoft.g3.testcases;
 
-import jetsmart_exercises.grupo3.Automatization.pageobject.pages.*;
+import bctsoft.g3.pageobject.pages.*;
 import org.junit.Assert;
 import org.junit.Test;
 

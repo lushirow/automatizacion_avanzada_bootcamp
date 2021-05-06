@@ -1,4 +1,4 @@
-package jetsmart_exercises.grupo3.Automatization.testcases;
+package bctsoft.g3.testcases;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;

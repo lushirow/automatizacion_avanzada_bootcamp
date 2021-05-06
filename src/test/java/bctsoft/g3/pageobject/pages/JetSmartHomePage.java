@@ -1,7 +1,7 @@
-package jetsmart_exercises.grupo3.Automatization.pageobject.pages;
+package bctsoft.g3.pageobject.pages;
 
-import jetsmart_exercises.grupo3.Automatization.pageobject.base.SeleniumBase;
-import jnr.ffi.annotations.In;
+import bctsoft.g3.pageobject.base.SeleniumBase;
+//import jnr.ffi.annotations.In;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;

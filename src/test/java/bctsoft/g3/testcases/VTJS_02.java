@@ -1,9 +1,6 @@
-package jetsmart_exercises.grupo3.Automatization.testcases;
+package bctsoft.g3.testcases;
 
-import jetsmart_exercises.grupo3.Automatization.pageobject.pages.JetSmartHomePage;
-import jetsmart_exercises.grupo3.Automatization.pageobject.pages.JetSmartVuelosOpcionalesDetallesPasajero;
-import jetsmart_exercises.grupo3.Automatization.pageobject.pages.JetSmartVuelosOpcionalesEquipaje;
-import jetsmart_exercises.grupo3.Automatization.pageobject.pages.JetSmartVuelosSeleccionDePasajes;
+import bctsoft.g3.pageobject.pages.*;
 import org.junit.Assert;
 import org.junit.Test;
 

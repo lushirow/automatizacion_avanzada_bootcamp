@@ -1,6 +1,6 @@
-package jetsmart_exercises.grupo3.Automatization.pageobject.pages;
+package bctsoft.g3.pageobject.pages;
 
-import jetsmart_exercises.grupo3.Automatization.pageobject.base.SeleniumBase;
+import bctsoft.g3.pageobject.base.SeleniumBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
