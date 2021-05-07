@@ -44,7 +44,6 @@ public class JetSmartTrasladosInformacion extends SeleniumBase {
     }
 
     public void volverAResultados()throws InterruptedException{
-        Thread.sleep(5000);
-        click(btnResultados);
+        goBack();
     }
 }
