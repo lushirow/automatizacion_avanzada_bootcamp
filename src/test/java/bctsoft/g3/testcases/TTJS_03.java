@@ -15,7 +15,6 @@ public class TTJS_03 extends TestBase{
         jsTrasladosPage = new JetSmartTrasladosPage(driver);
         jsTrasladosInformacion = new JetSmartTrasladosInformacion(driver);
         jsHomePage.goToUrl("https://www.jetsmart.com/cl/es/");
-        Thread.sleep(3000); //agregar condición
         jsHomePage.cerrarModuloSuscribete();
         jsHomePage.seleccionarPestanaTraslados();
         jsHomePage.switchToIframe(2);
@@ -25,10 +24,8 @@ public class TTJS_03 extends TestBase{
         jsHomePage.setSeleccionFechaTraslados(5);
         jsHomePage.setSeleccionHorarioTraslados("12:00 AM");
         jsHomePage.setSeleccionPasajerosTraslados("1");
-        Thread.sleep(3000);
         jsHomePage.iniciarBusquedaTraslados();
         jsHomePage.cambiarAPestanaActual(1);
-        Thread.sleep(10000);
         jsTrasladosPage.reservarPrimeraOpcion();
         jsTrasladosInformacion.llenarCampoNombre("Christian Bale");
         jsTrasladosInformacion.llenarYConfirmarEmail("Christian@gmail.com");

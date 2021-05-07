@@ -14,7 +14,7 @@ public class JetSmartTrasladosPage extends SeleniumBase {
         super(driver);
     }
 
-    WebDriverWait espera = new WebDriverWait(driver, 20);
+    WebDriverWait espera = new WebDriverWait(driver, 50);
     //repositorio de objetos que vamos a utilizar de JetSmart
     private By btnReservaAhora = By.xpath("//button[contains(text(),'Reserva ahora')]");
     private By labelInputTransporteOrigen = By.xpath("//div[@ng-bind='searchData.pickupLocation.name']");
@@ -30,18 +30,20 @@ public class JetSmartTrasladosPage extends SeleniumBase {
         }
     }
 
-    public boolean checkResultadosArrojados(){
+    public boolean checkResultadosArrojados()throws InterruptedException{
         espera.until(ExpectedConditions.elementToBeClickable(ulOfResultados));
         List<WebElement> resultadosList = this.findElements(resultados);
         System.out.println("List size is: " +resultadosList.size());
+        Thread.sleep(3000);
         if(resultadosList.size()>1){
             return true;
         }else{
             return false;
         }
     }
-    public boolean checkTransporteIdaYVuelta(String origen, String destino){
+    public boolean checkTransporteIdaYVuelta(String origen, String destino) throws InterruptedException{
         System.out.println(this.getUrl());
+        Thread.sleep(3000);
         if(getText(labelInputTransporteOrigen).contains(origen)&&getText(labelInputTransporteDestino).contains(destino)){
             return true;
         } else {

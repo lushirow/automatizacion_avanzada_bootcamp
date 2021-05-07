@@ -17,7 +17,6 @@ public class JetSmartTrasladosInformacion extends SeleniumBase {
     private By inputFlightNumber = By.id("gt-pickup-flight-number");
     private By btnIrACaja = By.xpath("//button[contains(text(),'Ir a caja')]");
     private By btnResultados = By.xpath("//*[contains(text(),'Resultados')]");
-    //private By
 
     //keyword Driven
     public void llenarCampoNombre(String nombre) {
@@ -34,16 +33,18 @@ public class JetSmartTrasladosInformacion extends SeleniumBase {
         click(inputMobileNumber);
         type(telefono, inputMobileNumber);
     }
-    public void llenarCampoNumeroDeVuelo(String vuelo) {
+    public void llenarCampoNumeroDeVuelo(String vuelo) throws InterruptedException{
         click(inputFlightNumber);
         type(vuelo, inputFlightNumber);
+        Thread.sleep(5000);
     }
 
     public void irACaja(){
         click(btnIrACaja);
     }
 
-    public void volverAResultados(){
+    public void volverAResultados()throws InterruptedException{
+        Thread.sleep(5000);
         click(btnResultados);
     }
 }

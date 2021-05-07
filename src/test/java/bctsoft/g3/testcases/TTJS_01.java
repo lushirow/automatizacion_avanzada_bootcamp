@@ -14,7 +14,6 @@ public class TTJS_01 extends TestBase{
         jsHomePage = new JetSmartHomePage(driver);
         jsTrasladosPage = new JetSmartTrasladosPage(driver);
         jsHomePage.goToUrl("https://www.jetsmart.com/cl/es/");
-        Thread.sleep(3000);
         jsHomePage.cerrarModuloSuscribete();
         jsHomePage.seleccionarPestanaTraslados();
         jsHomePage.switchToIframe(2);
@@ -24,10 +23,8 @@ public class TTJS_01 extends TestBase{
         jsHomePage.setSeleccionFechaTraslados(5);
         jsHomePage.setSeleccionHorarioTraslados("12:00 AM");
         jsHomePage.setSeleccionPasajerosTraslados("1");
-        Thread.sleep(3000);
         jsHomePage.iniciarBusquedaTraslados();
         jsHomePage.cambiarAPestanaActual(1);
-        Thread.sleep(10000);
         Assert.assertTrue(jsTrasladosPage.checkResultadosArrojados());
     }
 }

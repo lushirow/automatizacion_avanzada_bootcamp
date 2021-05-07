@@ -183,12 +183,14 @@ public class JetSmartHomePage extends SeleniumBase {
         }
     }
 
-    public void iniciarBusquedaTraslados() {
+    public void iniciarBusquedaTraslados()throws InterruptedException {
         click(btnBusquedaTraslados);
+        Thread.sleep(4000);
     }
 
-    public void cambiarAPestanaActual(int i) {
+    public void cambiarAPestanaActual(int i) throws InterruptedException{
         this.switchToParentFrame();
         this.switchToWindows(i);
+        Thread.sleep(10000);
     }
 }

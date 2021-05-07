@@ -18,11 +18,8 @@ public class HTJS_01 extends TestBase{
         jsHomePage = new JetSmartHomePage(driver);
         jsHotelesResults = new JetSmartHotelesResultados(driver);
         jsHomePage.goToUrl("https://jetsmart.com/cl/es/");
-        Thread.sleep(5000);
         jsHomePage.cerrarModuloSuscribete();
-        Thread.sleep(2050);
         jsHomePage.seleccionarPestanaHotel();
-        Thread.sleep(3000);
         jsHomePage.setTxtInputHotelDestino("Buenos Aires");
         jsHomePage.setSeleccionCantidadNinosHotel("1");
         jsHomePage.iniciarBusquedaHotelSmart();
