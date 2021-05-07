@@ -57,6 +57,10 @@ public class SeleniumBase {
         }
     }
 
+    public void goBack() {
+        driver.navigate().back();
+    }
+
     public void goToUrl(String url) {
         driver.get(url);
     }
