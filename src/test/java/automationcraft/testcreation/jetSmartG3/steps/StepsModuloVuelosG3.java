@@ -1,6 +1,6 @@
 package automationcraft.testcreation.jetSmartG3.steps;
 
-import automationcraft.testcreation.jetSmartG3.pages.JetSmartHomePage;
+import automationcraft.testcreation.jetSmartG3.pages.*;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -11,6 +11,13 @@ public class StepsModuloVuelosG3 {
 
     WebDriver driver;
     JetSmartHomePage jsHomePage;
+    JetSmartVuelosSeleccionDePasajes jsSeleccionPasajes;
+    JetSmartVuelosOpcionalesDetallesPasajero jsDetallesPasajeros;
+    JetSmartVuelosOpcionalesEquipaje jsEquipaje;
+    JetSmartVuelosOpcionalesAsientos jsAsientos;
+    JetSmartVuelosOpcionalesExtras jsExtras;
+    JetSmartVuelosPago jsPago;
+
     @Given("que soy un usuario e ingreso a la web {string}")
     public void que_soy_un_usuario_e_ingreso_a_la_web(String string) throws InterruptedException {
         jsHomePage = new JetSmartHomePage(driver);
@@ -56,45 +63,47 @@ public class StepsModuloVuelosG3 {
         Assert.assertTrue(jsHomePage.validarAlertaDeError());
     }
     @When("selecciono el paquete mas barato")
-    public void selecciono_el_paquete_mas_barato() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-
-    @When("presiono el boton Continuar")
-    public void presiono_el_boton_continuar() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void selecciono_el_paquete_mas_barato() throws InterruptedException {
+        jsSeleccionPasajes = new JetSmartVuelosSeleccionDePasajes(driver);
+        jsSeleccionPasajes.seleccionarTarifa();
+        jsSeleccionPasajes.seleccionarPaquete();
+        jsSeleccionPasajes.clickContinuar();
     }
 
     @When("relleno los datos del pasajero con el {string} y la {string}")
     public void relleno_los_datos_del_pasajero_con_el_y_la(String string, String string2) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        jsDetallesPasajeros.escribirNombreApellido("Carlos VanHelsing");
+        jsDetallesPasajeros.escribirFechaDeNacimiento("30-09-1990");
+        jsDetallesPasajeros.clickContinuar();
+    }
+
+    @Then("aparece la opcion de modificar la reserva")
+    public void aparece_la_opcion_de_modificar_la_reserva(){
+        Assert.assertTrue(jsEquipaje.ModificarReserva());
     }
 
     @When("selecciono el equipaje")
     public void selecciono_el_equipaje() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        jsEquipaje.seleccionEquipaje();
+        jsEquipaje.clickContinuar();
     }
 
     @When("presiono el boton No quiero elegir Asientos")
-    public void presiono_el_boton_no_quiero_elegir_asientos() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void presiono_el_boton_no_quiero_elegir_asientos() throws InterruptedException {
+        jsAsientos.cerrarModalDeAsientos();
+        jsAsientos.clickNoQuieroElegirAsientos();
     }
 
     @When("selecciono llevar tarjeta de Embargue")
     public void selecciono_llevar_tarjeta_de_embargue() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        jsExtras.seleccionarLlevarTarjetaDeEmbargue();
+        jsExtras.clickContinuar();
+        jsExtras.cerrarModalSeguroDeViaje();
     }
 
     @Then("aparece el formulario de pago")
-    public void aparece_el_formulario_de_pago() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void aparece_el_formulario_de_pago() throws InterruptedException {
+        Assert.assertTrue(jsPago.existeContainerPagatuReserva());
     }
 
 }
