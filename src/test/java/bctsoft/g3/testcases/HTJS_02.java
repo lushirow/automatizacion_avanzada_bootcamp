@@ -1,9 +1,8 @@
 package bctsoft.g3.testcases;
 
 import bctsoft.g3.pageobject.pages.*;
-import org.junit.Assert;
-import org.junit.Test;
-import org.openqa.selenium.Keys;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class HTJS_02 extends TestBase {
 

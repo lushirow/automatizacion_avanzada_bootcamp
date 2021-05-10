@@ -7,5 +7,4 @@ Feature: Login Page Features
   Scenario: Forgot password link login page
     Given user is on login page
     Then forgot message link should be displayed
-
   #Scenario: Login with correct credentials

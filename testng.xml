@@ -1,8 +1,0 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Bootcamp Tsoft">
-    <test name="Navegador Chrome: Web">
-        <classes>
-            <class name="testcases.atc01_testCase"></class>
-        </classes>
-    </test>
-</suite>
