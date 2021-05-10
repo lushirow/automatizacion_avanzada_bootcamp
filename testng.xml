@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Bootcamp Tsoft">
-    <test name="Navegador Chrome: Web">
+    <test name="Regresion de Web JetSmart">
         <classes>
-            <class name="testcases.atc01_testCase"></class>
+            <class name="bctsoft.g3.testcases.HTJS_01"></class>
         </classes>
     </test>
 </suite>

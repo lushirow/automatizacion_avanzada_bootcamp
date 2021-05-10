@@ -1,9 +1,8 @@
 package bctsoft.g3.testcases;
 
 import bctsoft.g3.pageobject.pages.*;
-import org.junit.Assert;
-import org.junit.Test;
-import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class TTJS_01 extends TestBase{
     protected JetSmartHomePage jsHomePage;

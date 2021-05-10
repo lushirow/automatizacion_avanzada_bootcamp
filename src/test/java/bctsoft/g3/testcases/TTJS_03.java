@@ -1,8 +1,8 @@
 package bctsoft.g3.testcases;
 
 import bctsoft.g3.pageobject.pages.*;
-import org.junit.Assert;
-import org.junit.Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class TTJS_03 extends TestBase{
     protected JetSmartHomePage jsHomePage;
