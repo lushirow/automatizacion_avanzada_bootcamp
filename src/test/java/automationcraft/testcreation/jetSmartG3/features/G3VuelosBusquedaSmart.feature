@@ -1,5 +1,5 @@
 #Feature: Grupo 3, Vuelo
-Feature: G3 Vuelos Busqueda Smart
+Feature: G3 Modulo de Vuelos Busqueda Smart
   Archivo Gherkin que contiene todas las casuisticas de Vuelos Busqueda Smart de la web JetSmart
   este escenario esta basado en el punto de vista del usuario final.
 
@@ -13,4 +13,12 @@ Feature: G3 Vuelos Busqueda Smart
     And ingreso la "fecha" de ida en el Calendario
     And ingreso un "codigo" promocional
     And presiono el boton Busqueda Smart
-    Then aparece alerta de codigo promocional no valido
+    And selecciono el paquete mas barato
+    And presiono el boton Continuar
+    And relleno los datos del pasajero con el "Nombre y Apellido" y la "Fecha de Nacimiento"
+    And presiono el boton Continuar
+    And selecciono el equipaje
+    And presiono el boton No quiero elegir Asientos
+    And selecciono llevar tarjeta de Embargue
+    And presiono el boton Continuar
+    Then aparece el formulario de pago
