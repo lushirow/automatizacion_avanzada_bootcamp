@@ -110,7 +110,7 @@
                     <threadCount>4</threadCount>
                     <<useUnlimitedThreads>false</useUnlimitedThreads>-->
                    <suiteXmlFiles>
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <suiteXmlFile>testngGrupo3.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
