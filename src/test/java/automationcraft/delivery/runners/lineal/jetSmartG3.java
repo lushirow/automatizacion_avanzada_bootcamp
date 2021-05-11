@@ -6,8 +6,8 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/test/java/automationcraft/testcreation/jetsmartG2/features"},
-        glue = {"automationcraft.testcreation.jetsmartG2.steps","automationcraft.engine.bdd"},
+        features = {"src/test/java/automationcraft/testcreation/jetSmartG3/features"},
+        glue = {"automationcraft.testcreation.jetSmartG3.steps","automationcraft.engine.bdd"},
         plugin = {"pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "timeline:test-output-thread"},
         tags = "@G3"
