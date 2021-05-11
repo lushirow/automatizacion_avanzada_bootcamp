@@ -52,8 +52,7 @@ public class StepsModuloHotelesG3 {
     }
 
     @Then("Aparece el hotel seleccionado")
-    public void apareceElHotelSeleccionado() {
-        jsHotelesResults.verificarResultadoPagina();
+    public void apareceElHotelSeleccionado() throws InterruptedException {
         Assert.assertTrue(jsHotelesResults.verificarResultadoPagina());
     }
 

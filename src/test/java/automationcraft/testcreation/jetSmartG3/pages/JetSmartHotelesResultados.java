@@ -28,26 +28,23 @@ public class JetSmartHotelesResultados extends SeleniumBase {
 
     public void aplicarFiltroDeEstrellas(String filtro) throws InterruptedException {
         this.btnFiltroEstrellas = By.xpath("//div[@class='bui-checkbox__label filter_item css-checkbox']/span[contains(text(),'" + filtro + "')]");
-        if (isDisplayed(btnFiltroEstrellas)) {
-            click(btnFiltroEstrellas);
-            Thread.sleep(2000);
-        }
+        esperaEnSegundosYIsDisplayed(30,btnFiltroEstrellas);
+        click(btnFiltroEstrellas);
     }
 
     public void aplicarFiltroDesayunoIncluido() throws InterruptedException {
-        if (isDisplayed(btnFiltroDesayunoInlcuido)) {
-            click(btnFiltroDesayunoInlcuido);
-            Thread.sleep(2000);
-        }
+        esperaEnSegundosYIsDisplayed(30,btnFiltroDesayunoInlcuido);
+        click(btnFiltroDesayunoInlcuido);
     }
 
-    public boolean verificarResultadoPagina() {
-        espera.until(ExpectedConditions.elementToBeClickable(findElement(txtResultados))).isDisplayed();
+    public boolean verificarResultadoPagina() throws InterruptedException {
+        //espera.until(ExpectedConditions.elementToBeClickable(findElement(txtResultados))).isDisplayed();
+        esperaEnSegundosYIsDisplayed(30,txtPersonas);
         boolean resultadofinal = findElement(txtPersonas).isDisplayed();
         return resultadofinal;
     }
     public void verHotelDisponible() throws  InterruptedException{
-        Thread.sleep(3000);
+        esperaEnSegundosYIsDisplayed(30,btnVerDisponibilidad);
         click(btnVerDisponibilidad);
         switchToParentFrame();
         switchToWindows(2);

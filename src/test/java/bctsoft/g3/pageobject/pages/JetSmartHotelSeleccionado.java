@@ -24,6 +24,8 @@ public class JetSmartHotelSeleccionado extends SeleniumBase {
     private By btnReservare = By.xpath("//span[contains(text(),'Reservaré')]");
 
     public boolean validarEstrellasyPopularidad() throws InterruptedException {
+        esperaEnSegundosYIsDisplayed(30,txtEstrellas);
+        esperaEnSegundosYIsDisplayed(30,txtPopularidad);
         boolean validaEstrellas;
         boolean validarPopularidad;
         boolean casoExitoso;

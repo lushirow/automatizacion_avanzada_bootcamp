@@ -22,7 +22,6 @@ public class HTJS_01 extends TestBase{
         jsHomePage.setTxtInputHotelDestino("Buenos Aires");
         jsHomePage.setSeleccionCantidadNinosHotel("1");
         jsHomePage.iniciarBusquedaHotelSmart();
-        jsHotelesResults.verificarResultadoPagina();
         Assert.assertTrue(jsHotelesResults.verificarResultadoPagina());
     }
 }

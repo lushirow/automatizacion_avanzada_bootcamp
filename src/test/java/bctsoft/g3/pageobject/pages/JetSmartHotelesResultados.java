@@ -41,9 +41,10 @@ public class JetSmartHotelesResultados extends SeleniumBase {
         }
     }
 
-    public boolean verificarResultadoPagina() {
+    public boolean verificarResultadoPagina() throws InterruptedException {
         espera.until(ExpectedConditions.elementToBeClickable(findElement(txtResultados))).isDisplayed();
         boolean resultadofinal = findElement(txtPersonas).isDisplayed();
+        Thread.sleep(1000);
         return resultadofinal;
     }
     public void verHotelDisponible() throws  InterruptedException{
