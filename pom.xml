@@ -103,15 +103,15 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.version}</version>
                 <configuration>
-                    <!--includes>
-                        <include>**/reg_001_jetsmartRunner.java</include>
+                    <includes>
+                        <include>**/jetSmartG3.java</include>
                     </includes>
                     <parallel>methods</parallel>
                     <threadCount>4</threadCount>
-                    <<useUnlimitedThreads>false</useUnlimitedThreads>-->
-                   <suiteXmlFiles>
+                    <useUnlimitedThreads>false</useUnlimitedThreads>
+                   <!--suiteXmlFiles>
                         <suiteXmlFile>testngGrupo3.xml</suiteXmlFile>
-                    </suiteXmlFiles>
+                    </suiteXmlFiles>-->
                 </configuration>
             </plugin>
         </plugins>
