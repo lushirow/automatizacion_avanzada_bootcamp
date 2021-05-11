@@ -18,6 +18,7 @@ public class JetSmartVuelosOpcionalesEquipaje extends SeleniumBase {
 
     //keyword Driven
     public boolean ModificarReserva(){
+        esperaEnSegundosYIsDisplayed(30,btnLlamadaAModificarReserva);
         click(btnLlamadaAModificarReserva);
         if (isDisplayed(modalModificarReserva)){
             return true;
@@ -26,6 +27,7 @@ public class JetSmartVuelosOpcionalesEquipaje extends SeleniumBase {
         }
     }
     public void seleccionEquipaje(){
+        esperaEnSegundosYIsDisplayed(30,btnSoloBolsoDeMano);
         click(btnSoloBolsoDeMano);
         click(btnNoDeseoEquipajeFacturado);
     }
