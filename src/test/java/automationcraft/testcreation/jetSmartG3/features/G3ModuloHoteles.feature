@@ -12,7 +12,6 @@ Feature: G3 Modulo de Hoteles
     And Hago click en busqueda smart
     And Aplico filtros de busqueda
     And Selecciono el primer hotel disponible
-    And Selecciono el apartamento
     Then Comprobamos que estamos en la pagina que queremos con los filtros seleccionados
 
 #Feature: Grupo 3, Modulo de Hoteles, Validacion Posicion Previa Reservacion
