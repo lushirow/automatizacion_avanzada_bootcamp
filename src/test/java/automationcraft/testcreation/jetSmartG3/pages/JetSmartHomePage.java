@@ -140,7 +140,7 @@ public class JetSmartHomePage extends SeleniumBase {
     public void setTxtInputTrasladosOrigen(String origen) throws InterruptedException {
         click(txtInputTrasladosOrigen);
         type(origen, txtInputTrasladosOrigen);
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         this.seleccionInputTrasladosOrigen = By.xpath("//span[contains(text(),'" + origen + "')]");
         click(seleccionInputTrasladosOrigen);
     }
@@ -148,7 +148,7 @@ public class JetSmartHomePage extends SeleniumBase {
     public void setTxtInputTrasladosDestino(String destino) throws InterruptedException {
         click(txtInputTrasladosDestino);
         type(destino, txtInputTrasladosDestino);
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         this.seleccionInputTrasladosDestino = By.xpath("//span[contains(text(),'" + destino + "')]");
         click(seleccionInputTrasladosDestino);
     }
