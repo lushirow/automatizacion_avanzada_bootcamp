@@ -30,11 +30,13 @@ public class JetSmartHotelesResultados extends SeleniumBase {
         this.btnFiltroEstrellas = By.xpath("//div[@class='bui-checkbox__label filter_item css-checkbox']/span[contains(text(),'" + filtro + "')]");
         esperaEnSegundosYIsDisplayed(30,btnFiltroEstrellas);
         click(btnFiltroEstrellas);
+        Thread.sleep(5000);
     }
 
     public void aplicarFiltroDesayunoIncluido() throws InterruptedException {
         esperaEnSegundosYIsDisplayed(30,btnFiltroDesayunoInlcuido);
         click(btnFiltroDesayunoInlcuido);
+        Thread.sleep(5000);
     }
 
     public boolean verificarResultadoPagina() throws InterruptedException {
@@ -44,6 +46,7 @@ public class JetSmartHotelesResultados extends SeleniumBase {
         return resultadofinal;
     }
     public void verHotelDisponible() throws  InterruptedException{
+        Thread.sleep(3000);
         esperaEnSegundosYIsDisplayed(30,btnVerDisponibilidad);
         click(btnVerDisponibilidad);
         switchToParentFrame();
